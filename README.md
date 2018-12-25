@@ -10,11 +10,11 @@ I made this app because I love the overcast app on iOS and I wanted something th
 
 Here is what the regular site looks like in Chrome:
 
-![overcastinchrome](C:\Users\spand\Documents\Game Media Project\overcastinchrome.PNG)
+![overcastinchrome](overcastinchrome.PNG)
 
 This is what it looks like in my electron wrapper app:
 
-![overcastforgaming](C:\Users\spand\Documents\Game Media Project\overcastforgaming.PNG)
+![overcastforgaming](overcastforgaming.PNG)
 
 You can see that there is no visible frame, and there is also a highlighted area where the Gamepad is currently selected. Clicking on the menu icon in the upper left corner reveals a guide for all the Xbox controller mappings.
 

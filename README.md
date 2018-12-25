@@ -20,7 +20,7 @@ You can see that there is no visible frame, and there is also a highlighted area
 
 ## How to use
 
-Just download the latest build from here and run OG.exe inside that folder.
+Because the release size of this app is larger than 10 mb, you'll need to compile this for now in order to get an exe file that you can run. I might just make a releases folder if I can't resolve that issue eventually.
 
 ## FAQ 
 

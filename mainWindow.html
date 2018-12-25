@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Media</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <style>
+        
+        body {
+            background-color: #312C2F;
+            color: #11A29D;
+        }
+        
+        #top {
+            -webkit-app-region: drag;
+            margin-top: 0px;
+            height: 1.2em;
+            cursor: default;
+        }
+        
+        #closeIcon {
+            position: absolute;
+            right: 5px;
+        }
+        
+        #fullscreenIcon {
+            position: absolute;
+            right: 40px;
+        }
+        
+        #menuIcon {
+            position: absolute;
+        }
+        
+        .material-icons {
+            -webkit-user-select: none;
+            -webkit-app-region: no-drag;
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 32px;  /* Preferred icon size */
+            color: #11A29D;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+            top: 0px;
+            
+            /* Support for all WebKit browsers. */
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .material-icons:hover {
+            font-weight: bold;
+        }
+        
+        .buttonGuide {
+            overflow: hidden;
+            font-family: 'Verdana', Geneva, sans-serif;
+        }
+        
+        /* Changes the button guide pictures */
+        .buttonGuide img {
+            position: relative;
+            float: left;
+            width:  40px;
+            height: 40px;
+            left: 15px;
+            background-position: 50% 50%;
+            background-repeat:   no-repeat;
+            background-size:     cover;
+        }
+        
+        /* Changes the button guide text */
+        .buttonGuide tr td h3 {
+            text-align: left;
+            padding-left: 25px;
+        }
+
+        th {
+            border-bottom: 5px solid #3a3437;
+        }
+
+        #webviewContainer {
+            /* Makes the webview's enclosing div use only 95% of the window, so 
+            that it doesn't use more space and create an unnecesary scrollbar */
+            height: 95vh; /* vh is a viewport height unit */
+            z-index: 0;
+        }
+        
+        #loadedSite {
+            /* Makes the site take the whole enclosing div */
+            height: 100%;
+        }
+        
+        .sideGuide {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #252124;
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+        
+        ::-webkit-scrollbar { background-color: #252124; width: 1em; }
+        ::-webkit-scrollbar-thumb:window-inactive, ::-webkit-scrollbar-thumb { background: #3a3437; }
+        
+    </style>
+    
+</head>
+<body>
+    <!-- Grabbable area for the app  -->
+    <div id='top'> <i id="menuIcon" class="material-icons" onclick="openGuide()">menu</i>
+        <i id="fullscreenIcon" class="material-icons">fullscreen</i> <i id="closeIcon" class="material-icons">close</i> </div>
+        
+        <div id="sideGuideDiv" class="sideGuide">
+            <i class="material-icons" onclick="closeGuide()" style="position: absolute; top: 0.5vh; left: 250px; z-index: 2;">close</i>
+            <table class='buttonGuide' style="width:100%; top: 15px; position: absolute;">
+                <tr>
+                    <th class="tableHeader" COLSPAN=2><h2>Podcast Selection</h2></th>
+                </tr>
+                <tr>
+                    <td><img src= ".\icons\Xbox One Icons\XboxOne_A.png"/></td>
+                    <td><h3>Select Podcast</h3></td> 
+                </tr>
+                <tr>
+                    <td><img src= ".\icons\Xbox One Icons\XboxOne_Left_Stick.png"/></td>
+                    <td><h3>Navigate</h3></td> 
+                </tr>
+                <tr>
+                    <td><img src= ".\icons\Xbox One Icons\XboxOne_LB.png"/></td>
+                    <td><h3>Jump to Top</h3></td> 
+                </tr>
+                <tr>
+                    <td><img src= ".\icons\Xbox One Icons\XboxOne_RB.png"/></td>
+                    <td><h3>Jump to Bottom</h3></td> 
+                </tr>
+                <tr>
+                    <td><img src= ".\icons\Xbox One Icons\XboxOne_LT.png"/></td>
+                    <td><h3>Page Up</h3></td> 
+                </tr>
+                <tr>
+                    <td><img src= ".\icons\Xbox One Icons\XboxOne_RT.png"/></td>
+                    <td><h3>Page Down</h3></td> 
+                </tr>
+                <tr>
+                    <td><img src= ".\icons\Xbox One Icons\XboxOne_Menu.png"/></td>
+                    <td><h3>Toggle Fullscren</h3></td> 
+                </tr>
+                <tr>
+                    <th class="tableHeader" COLSPAN=2><h2>Podcast Player</h2></th>
+                </tr>
+                <tr>
+                    <td><img src= ".\icons\Xbox One Icons\XboxOne_A.png"/></td>
+                    <td><h3>Play/Pause</h3></td> 
+                </tr>
+                <tr>
+                    <td><img src= ".\icons\Xbox One Icons\XboxOne_LB.png"/></td>
+                    <td><h3>Skip Back</h3></td> 
+                </tr>
+                <tr>
+                    <td><img src= ".\icons\Xbox One Icons\XboxOne_RB.png"/></td>
+                    <td><h3>Skip Forward</h3></td> 
+                </tr>
+                <tr>
+                    <td><img src= ".\icons\Xbox One Icons\XboxOne_X.png"/></td>
+                    <td><h3>Skip Back</h3></td> 
+                </tr>
+                <tr>
+                    <td><img src= ".\icons\Xbox One Icons\XboxOne_Y.png"/></td>
+                    <td><h3>Skip Forward</h3></td> 
+                </tr>
+                <tr>
+                    <td><img src= ".\icons\Xbox One Icons\XboxOne_LT.png"/></td>
+                    <td><h3>Scrub Back</h3></td> 
+                </tr>
+                <tr>
+                    <td><img src= ".\icons\Xbox One Icons\XboxOne_RT.png"/></td>
+                    <td><h3>Scrub Forward</h3></td> 
+                </tr>
+                <tr>
+                    <td><img src= ".\icons\Xbox One Icons\XboxOne_Windows.png"/></td>
+                    <td><h3>Delete Podcast</h3></td> 
+                </tr>
+            </table>
+        </div>
+        
+        <div id="webviewContainer">
+            <webview id="loadedSite" src="https://overcast.fm/login" preload="overcastController.js" webpreferences="allowDisplayingInsecureContent=yes"></webview>
+        </div>
+        
+        
+        <script>
+            const overcastWebview = document.getElementById('loadedSite');
+            const {ipcRenderer} = require('electron')
+
+            overcastWebview.addEventListener('did-start-loading', hidePageDuringLoad)
+            
+            overcastWebview.addEventListener('did-finish-load', () => {
+                
+                overcastWebview.executeJavaScript('__Controller.initiatePodcastSelector();');
+                overcastWebview.executeJavaScript('__Controller.injectDarkModeCSS();');
+                overcastWebview.executeJavaScript('__Controller.turnDarkModeOn();');
+                overcastWebview.style.visibility = 'visible';
+
+                // For debugging the webview that holds Overcast's site
+                // overcastWebview.openDevTools();
+            });
+            
+            // The page gets hidden during load because it didn't look good for text 
+            // and controls to go from orange to teal during the loading period
+            function hidePageDuringLoad() {
+                overcastWebview.style.visibility = 'hidden';
+            }
+            
+            function openGuide() {
+                document.getElementById("sideGuideDiv").style.width = "300px";
+            }
+            
+            function closeGuide() {
+                document.getElementById("sideGuideDiv").style.width = "0";
+            }
+            
+            document.getElementById('fullscreenIcon').addEventListener("click", function(){
+                toggleFullscreen();
+            });
+            
+            document.getElementById('closeIcon').addEventListener("click", function(){
+                closeIconPressed();
+            });
+            
+            function toggleFullscreen() {
+                ipcRenderer.send('start-pressed');
+            }
+            function closeIconPressed() {
+                ipcRenderer.send('exit-icon-pressed');
+            }
+            
+            // The functions below provide an interface for the index.js file to access the functions in overcastController.js
+            function toggleAudio() {
+                overcastWebview.executeJavaScript('__Controller.toggleAudioPlay();');
+            }
+            function audioSkipBack() {
+                overcastWebview.executeJavaScript('__Controller.audioGoBack();');
+            }
+            function audioSkipForward() {
+                overcastWebview.executeJavaScript('__Controller.audioSkipAhead();');
+            }
+            function windowNotFocused() {
+                overcastWebview.executeJavaScript('__Controller.tellGamePadDetectionThatWindowisNotFocused();');
+            }
+            function windowIsFocused() {
+                overcastWebview.executeJavaScript('__Controller.tellGamePadDetectionThatWindowisFocused();');
+            }
+        </script>
+    </body>
+    </html>

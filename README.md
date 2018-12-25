@@ -10,17 +10,17 @@ I made this app because I love the overcast app on iOS and I wanted something th
 
 Here is what the regular site looks like in Chrome:
 
-![overcastinchrome](C:\Users\spand\Documents\Game Media Project\overcastinchrome.PNG)
+![overcastinchrome](overcastinchrome.PNG)
 
 This is what it looks like in my electron wrapper app:
 
-![overcastforgaming](C:\Users\spand\Documents\Game Media Project\overcastforgaming.PNG)
+![overcastforgaming](overcastforgaming.PNG)
 
 You can see that there is no visible frame, and there is also a highlighted area where the Gamepad is currently selected. Clicking on the menu icon in the upper left corner reveals a guide for all the Xbox controller mappings.
 
 ## How to use
 
-Just download the latest build from here and run OG.exe inside that folder.
+Because the release size of this app is larger than 10 mb, you'll need to compile this for now in order to get an exe file that you can run. I might just make a releases folder if I can't resolve that issue eventually.
 
 ## FAQ 
 

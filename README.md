@@ -20,7 +20,9 @@ You can see that there is no visible frame, and there is also a highlighted area
 
 ## How to use
 
-Because the release size of this app is larger than 10 mb, you'll need to compile this for now in order to get an exe file that you can run. I might just make a releases folder if I can't resolve that issue eventually.
+The compiled app folders for this project are contained in the releases folder of this project. All you have to do to run this app is download the zip folder, decompress it, and double click on the app called "OG.exe". 
+
+[Click here to download the latest build](https://github.com/TheCatCoder/OvercastForGamers/blob/master/Releases/Overcast_For_Gamers_1.0.zip)
 
 ## FAQ 
 

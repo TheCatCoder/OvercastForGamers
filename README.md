@@ -22,7 +22,7 @@ You can see that there is no visible frame, and there is also a highlighted area
 
 The compiled app folders for this project are contained in the releases folder of this project. All you have to do to run this app is download the zip folder, decompress it, and double click on the app called "OG.exe". 
 
-[Click here to download the latest build](https://github.com/TheCatCoder/OvercastForGamers/blob/master/Releases/Overcast_For_Gamers_1.0.zip)
+[Click here to download the latest build](https://github.com/TheCatCoder/OvercastForGamers/raw/master/Releases/Overcast%20For%20Gamers%201.0.zip)
 
 ## FAQ 
 

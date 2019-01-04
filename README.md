@@ -36,7 +36,7 @@ You have use your actual mouse to click at least once inside the app's window, o
 
 **Can I use this with a DS4/PS4 controller instead?**
 
-Yes, but you'll have to use something like DS4 Windows to get it to work. I programmed the gamepad logic to ignore any controllers that are not Xbox controllers. That way, there isn't a conflict when you're playing a game using DS4 Windows and using this app. The gamepad API actually detect 2 controllers when that happens, so I had to make it ignore the raw PS4 controller input and only accept the emulated Xbox controller input as to avoid any unwanted behavior from the controller inputs running at the same time in the app.
+Yes, but you'll have to use something like DS4 Windows to get it to work. I programmed the gamepad logic to ignore any controllers that are not Xbox controllers. That way, there isn't a conflict when you're playing a game using DS4 Windows and using this app. The gamepad API actually detects 2 controllers when that happens, so I had to make it ignore the raw PS4 controller input and only accept the emulated Xbox controller input as to avoid any unwanted behavior from multiple controller inputs running at the same time in the app.
 
 **Why does it stop working correctly when I have more than one Xbox controller plugged in?**
 
